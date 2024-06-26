@@ -1,0 +1,36 @@
+---
+
+import photo from "../../assets/img/projects/main-projects/prototypePortfolio.png";
+
+export interface Props {
+  name: string;
+  url: string;
+  image: string;
+  github: string;
+  description: string;
+  techs: string;
+}
+
+const { name, image, url, github, description,techs} = Astro.props;
+
+---
+
+
+        <article class="flex gap-4 flex-col justify-center items-start text-start">
+            <header class="inline-flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
+                <h3 class="text-2xl">{name}</h3>
+            </header>
+            <div>
+                <a class="w- sm:w-3/4" target="_blank" href={url}>
+                    <img class="w-full h-full rounded-lg" src={image} alt="#">
+                </a>
+            </div>
+            <footer class="flex flex-col items-start gap-4">
+                <p class="max-w-lg text-sm md:text-base lg:text-lg text-balance">{description}</p>
+                <p class="max-w-lg text-xs md:text-sm lg:text-base text-balance">Las tecnologías utilizadas fueron: <span class="text-[#ba5bff]">{techs}</span>.</p>
+                <div class="[&>A]:border [&>A]:border-[#ffffff5c] hover:[&>A]:border-[#ad00ff5e] [&>A]:rounded-lg [&>A]:px-2 [&>A]:py-1 [&>A]:transition-colors [&>A]:duration-500 hover:[&>A]:bg-[#2f037738]">
+                    <a href={url} target="_blank">Probar</a>
+                    <a href={github} target="_blank">Ver Código</a>
+                </div>
+            </footer>
+        </article>

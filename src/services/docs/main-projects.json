@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Prototipo de portafolio personal",
+    "image": "https://i.imgur.com/5DW7Bqz.png",
+    "url": "https://prototypeportfolio.vercel.app",
+    "github": "https://github.com/FabrizioJordan/prototypePortfolio1",
+    "description": "Un prototipo de portafolio personal hecho como practica con TailwindCSS.",
+    "techs": "HTML5, CSS3 y TailwindCSS"
+  },  
+  {
+    "name": "Xiaomi Fake Page",
+    "image": "https://i.imgur.com/ZBPgjJX.png",
+    "url": "https://xiaomi-page.vercel.app",
+    "github": "https://github.com/FabrizioJordan/xiaomiPage/",
+    "description": "Página web para practicar componetización con JavaScript puro junto a TailwindCSS.",
+    "techs": "HTML5, CSS3, TailwindCSS y JavaScript"
+  }
+]

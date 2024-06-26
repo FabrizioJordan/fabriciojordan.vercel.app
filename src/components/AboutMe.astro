@@ -1,0 +1,45 @@
+---
+import envelopeIcon from "../assets/icon/envelope.svg";
+import uruguayFlag from "../assets/icon/uruguayFlag.svg";
+---
+
+<section id="about" class="w-full flex gap-4 flex-col justify-center items-center leading-7 tracking-wide">
+      <article class="text-start min-w-full flex flex-col justify-center items-start gap-2 md:gap-2">
+        <header class="inline-flex flex-col sm:flex-row items-start sm:items-center justify-center sm:gap-4 tracking-wider">
+          <h1 class="text-4xl sm:text-5xl font-bold">
+            Fabricio Jordán
+          </h1> 
+          <a class="inline-flex items-end underline underline-offset-4 decoration-2" href="#">Resumee</a>
+        </header>
+      </article>
+
+      <article class="max-w-3xl w-full min-w-full flex flex-col gap-4 items-start justify-center">
+        <header class="[&>p]:max-w-lg">
+          <h2 class="text-xl sm:text-2xl text-[#d47eff]">Desarollador Web</h2>
+          <p class="">
+            Hola!! Soy Fabricio, aunque la gente suele llamarme Jordan.
+          </p>
+          <p class="">
+            Soy un <span class="text-[#3474ff]">Uruguayo</span><img
+              class="size-5 rounded-md inline ml-1"
+              src={uruguayFlag?.src}
+              alt=""
+            /> de 19 años.
+          </p>
+          <p>
+            Soñador y amante del estudio, del autodidactismo y de los sistemas GNU/Linux con <span
+              class="text-[#ba5bff] [text-shadow:_2px_2px_0_rgb(0_0_0_/_65%)]"
+              >+2 Años de experiencia con JavaScript</span
+            >.
+          </p>
+        </header>
+        <ul class="hidden md:flex gap-2 flex-row justify-center items-center text-sm">
+          <li>
+            <p class="transition-colors duration-500 hover:!bg-[#ffffff40] bg-linear-3 gap-2 bg-size-1 animation-1 border border-white rounded-md px-2.5 p-1 flex justify-between items-center">
+              fabriorange28@gmail.com <button onclick="copyMailToClipboard()" ><img class="w-4 h-4 invert" src={envelopeIcon?.src} alt="envelope for click the button and copy the mail into the clipboard"/></button
+              >
+            </p>
+          </li>
+        </ul>
+      </article>
+    </section>

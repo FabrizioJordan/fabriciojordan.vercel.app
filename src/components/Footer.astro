@@ -1,0 +1,28 @@
+---
+import logo from '../assets/icon/icon1.svg';
+import linkedinIcon from "../assets/icon/linkedin.svg";
+import dribbbleIcon from "../assets/icon/dribbble.svg";
+import githubIcon from "../assets/icon/github.svg";
+---
+
+
+<footer class="w-full flex flex-col gap-4 [&_*]:transition-all [&_*]:duration-500 text-white">
+    
+    <div class=" flex flex-row justify-between gap-12">
+        <ul class="flex flex-row gap-8 justify-center items-center">
+            <a href=""><img class="min-w-8 w-8 h-8 invert hover:invert-[.65]" src={logo?.src} alt="Svg of a planet with rings."></a>
+            <ul class="flex flex-row gap-4 [&_IMG]:invert [&_IMG]:size-4 hover:[&_IMG]:invert-[.65]">
+                <a href="https://www.linkedin.com/in/fabricio-jordán-936385136/"><img src={linkedinIcon.src} alt=""></a>
+                <a href="https://github.com/FabrizioJordan"><img src={githubIcon.src} alt=""></a>
+                <a href="https://dribbble.com/FJL21"><img src={dribbbleIcon.src} alt=""></a>
+            </ul>
+        </ul>
+        <span class="text-[#9f968a] hover:text-[#ffffff]">Montevideo, Uruguay</span>
+    </div>
+    <hr class="border-[#57575799]">
+
+    <div class="grid grid-cols-2 sm:flex flex-row justify-between items-start gap-12">
+        <a class="flex flex-col justify-center" href="mailto:fabriorange28@gmail.com?subject=Hello%20Fabricio!%20..."><span class="hidden sm:inline">fabriorange28@gmail.com</span><button onclick="copyMailToClipboard()" class="sm:hidden flex text-white">Enviar Mail.</button></a>
+        <a class="hover:text-[#9f968a]" href="">Volver al Inicio</a>
+    </div>
+</footer>

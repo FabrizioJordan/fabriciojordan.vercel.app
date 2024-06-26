@@ -1,0 +1,32 @@
+---
+import githubIcon from "../../assets/icon/github.svg";
+import arrowUpIcon from "../../assets/icon/arrow-up-right.svg";
+
+export interface Props {
+  name: string;
+  url: string;
+  image: string;
+  github: string;
+}
+
+const { name, image, url, github } = Astro.props;
+
+---
+
+<div class="rounded-lg bg-[#454545] w-48 h-64 overflow-hidden">
+  <div class="absolute [&>A]:hover:translate-y-0 [&>A]:hover:opacity-100">
+      <a class="translate-y-6 opacity-0 z-10 absolute top-4 right-4 size-4 transition-all duration-500" href={github} target="_blank">
+          <img class="absolute size-4 invert" src={githubIcon?.src} alt=`svg de github`>
+      </a>    
+      <a class="translate-y-6 opacity-0 z-10 absolute top-10 right-4 size-4 transition-all duration-500" href={url} target="_blank">
+          <img class="absolute size-4 invert" src={arrowUpIcon?.src} alt="svg of a arrow to up">
+      </a>
+      <img class="z-1 w-48 h-64 object-cover rounded-lg transition-all duration-500 scale-95 hover:scale-100 grayscale hover:grayscale-0 border-2 border-[#0d5fbd71] hover:border-[#6300956e]" src={image} alt="#">
+  </div>    
+
+</div>
+
+
+<!--
+  
+ -->
