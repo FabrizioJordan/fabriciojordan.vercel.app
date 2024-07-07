@@ -4,7 +4,7 @@
     "image": "https://i.imgur.com/JvdXk5f.png",
     "url": "https://prototype-portfolio3.vercel.app",
     "github": "https://github.com/FabrizioJordan/prototypePortfolio3",
-    "description": "Un prototipo de portafolio personal hecho como practica con TailwindCSS y AstroJS.",
+    "description": "Un prototipo de portafolio personal hecho como práctica con TailwindCSS y AstroJS.",
     "techs": "AstroJS, JS y TailwindCSS"
   },  
   {
