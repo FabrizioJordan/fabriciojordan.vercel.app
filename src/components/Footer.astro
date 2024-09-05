@@ -10,12 +10,18 @@ import githubIcon from "../assets/icon/github.svg";
     
     <div class=" flex flex-row justify-between gap-12">
         <ul class="flex flex-row gap-8 justify-center items-center">
-            <a href=""><img class="min-w-8 w-8 h-8 invert hover:invert-[.55]" src={logo?.src} alt="Svg of a planet with rings."></a>
-            <ul class="flex flex-row gap-4 [&_IMG]:size-4 hover:[&_IMG]:invert-[.40]">
-                <a href="https://www.linkedin.com/in/fabricio-jordán-936385136/"><img src={linkedinIcon.src} alt="linkedin logo icon svg"></a>
-                <a href="https://github.com/FabrizioJordan"><img src={githubIcon.src} alt="github logo icon svg"></a>
-                <a href="https://dribbble.com/FJL21"><img src={dribbbleIcon.src} alt="dribble logo icon, a svg of a ball"></a>
-            </ul>
+            <li>
+                <a href="#body">
+                    <img class="min-w-8 size-8 invert hover:invert-[.55]" src={logo?.src} alt="Svg of a planet with rings.">
+                </a>
+            </li>
+            <li>
+                <nav class="flex flex-row gap-4 [&_IMG]:size-5 hover:[&_IMG]:invert-[.40]">
+                    <a href="https://www.linkedin.com/in/fabricio-jordán-936385136/"><img src={linkedinIcon.src} alt="linkedin logo icon svg"></a>
+                    <a href="https://github.com/FabrizioJordan"><img src={githubIcon.src} alt="github logo icon svg"></a>
+                    <a href="https://dribbble.com/FJL21"><img src={dribbbleIcon.src} alt="dribble logo icon, a svg of a ball"></a>
+                </nav>
+            </li>
         </ul>
         <span class="text-[#9f968a] hover:text-[#ffffff]">Montevideo, Uruguay</span>
     </div>

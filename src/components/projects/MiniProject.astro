@@ -13,20 +13,23 @@ const { name, image, url, github } = Astro.props;
 
 ---
 
-<div class="rounded-lg bg-[#454545] w-48 h-64 overflow-hidden">
+<li class="rounded-lg bg-[#454545] w-48 h-64 overflow-hidden">
   <div class="absolute [&>*]:duration-500
-  [&>img]:hover:border-[#6300956e] [&>img]:hover:scale-100 [&>img]:hover:grayscale-0 
-  [&>A]:hover:translate-y-0 [&>A]:hover:opacity-100">
+  [&>img]:border-[#6300956e] [&>img]:scale-100 [&>img]:grayscale-0 
+  [&>A]:translate-y-0 [&>A]:opacity-100
+  sm:[&>img]:border-[#500dbd75] sm:[&>img]:scale-95 sm:[&>img]:grayscale
+  sm:[&>A]:translate-y-6 sm:[&>A]:opacity-0
+  sm:[&>img]:hover:border-[#6300956e] sm:[&>img]:hover:scale-100 sm:[&>img]:hover:grayscale-0 
+  sm:[&>A]:hover:translate-y-0 sm:[&>A]:hover:opacity-100">
       <a class="translate-y-6 opacity-0 z-10 absolute top-4 right-4 size-5 transition-opacityTransform" href={github} target="_blank">
           <img class="absolute size-5" src={githubIcon?.src} alt=`svg de github`>
-      </a>    
+      </a>
       <a class="translate-y-6 opacity-0 z-10 absolute top-12 right-4 size-5 transition-opacityTransform" href={url} target="_blank">
           <img class="absolute size-5" src={arrowUpIcon?.src} alt="svg of a arrow to up">
       </a>
-      <img class="z-1 w-48 h-64 object-cover rounded-lg transition-filterColors scale-95 grayscale border-2 border-[#500dbd75]" src={image} alt="#">
+      <img class="z-1 w-48 h-64 object-cover rounded-lg transition-filterColors scale-95 grayscale border-2 border-[#500dbd75]" src={image} alt={name}>
   </div>    
-
-</div>
+</li>
 
 <style>
 </style>

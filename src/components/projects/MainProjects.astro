@@ -21,8 +21,8 @@ const { name, image, url, github, description, techs} = Astro.props;
             <header class="inline-flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
                 <h3 class="text-2xl">{name}</h3>
             </header>
-            <div class="">
-                <a class="" target="_blank" href={url}>
+            <div>
+                <a title="see project" target="_blank" href={url}>
                     <img class="w-full h-full rounded-lg max-w-xl transition-all duration-300 hover:brightness-75" src={image} alt="#">
                 </a>
             </div>
@@ -31,8 +31,8 @@ const { name, image, url, github, description, techs} = Astro.props;
                 <p class="text-pretty text-lg lg:text-xl">{description}</p>
                 <p class="text-base 2xl:text-lg">Las tecnologías utilizadas fueron: <span class="text-[#ba5bff]">{techs}</span>.</p>
                 <div class="flex flex-row gap-2 justify-center items-center [&>A]:border-2 [&>A]:border-[#ffffff5c] hover:[&>A]:border-[#c140ff5e] [&>A]:rounded-lg [&>A]:px-3 [&>A]:py-2 [&>A]:transition-colors [&>A]:duration-500 hover:[&>A]:bg-[#2f037738]">
-                    <a href={url} class="noiseEffect" target="_blank"><img class="w-5 h-6" src={goToIcon?.src} alt=""></a>
-                    <a href={github} class="noiseEffect" target="_blank"><img class="w-5 h-6" src={githubIcon?.src} alt=""></a>
+                    <a title="see project page" href={url} class="noiseEffect" target="_blank"><img class="w-5 h-6" src={goToIcon?.src} alt=""></a>
+                    <a title="show code" href={github} class="noiseEffect" target="_blank"><img class="w-5 h-6" src={githubIcon?.src} alt=""></a>
                 </div>
             </footer>
         </article>
