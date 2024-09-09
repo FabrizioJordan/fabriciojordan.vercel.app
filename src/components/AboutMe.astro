@@ -1,6 +1,8 @@
 ---
 import envelopeIcon from "../assets/icon/envelope.svg";
 import uruguayFlag from "../assets/icon/uruguayFlag.svg";
+
+import pdf from "../assets/Fabricio.pdf"
 ---
 
 <section id="about" class="w-full flex gap-4 flex-col justify-center items-center leading-7 tracking-wide">
@@ -9,7 +11,9 @@ import uruguayFlag from "../assets/icon/uruguayFlag.svg";
           <h1 class="text-4xl sm:text-5xl font-bold">
             Fabricio Jordán
           </h1> 
-          <a class="inline-flex items-end underline underline-offset-4 decoration-2" href="#">Resumee</a>
+          <form method="get" action={pdf}>
+              <button class="inline-flex items-end underline underline-offset-4 decoration-2" type="submit">Resumee</button>
+           </form>
         </header>
       </article>
 

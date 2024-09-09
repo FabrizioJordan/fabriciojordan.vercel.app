@@ -26,6 +26,13 @@ const { title } = Astro.props;
       <slot />
       <Footer />
     </div>
+    <div id="blob1"></div>
+    <div id="blob2"></div>
+<div id="noiseLayer"></div><svg viewBox="0 0 500 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <filter id="noiseFilter">
+    <feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" stitchTiles="stitch"></feTurbulence>
+  </filter>
+</svg>
   </body>
 </html>
 
@@ -39,6 +46,46 @@ const { title } = Astro.props;
   }
 
   body {
-    background-color: #161616;
+    background-image: radial-gradient(circle farthest-side, rgb(255 0 182 / 16%), rgb(255 18 158 / 3%));
   }
+
+  #blob1{
+    width: 125vw;
+    height: 50vw;
+    border-radius: 75% 90%;
+    background-color: rgba(143, 108, 159, 0.03);
+    transform: rotate(19deg);
+    filter: blur(8px);
+    mix-blend-mode: soft-light;
+    position: fixed;
+    top: 25vh;
+    left: -15vw;
+    z-index: -1;
+  }
+  #blob2{
+    width: 125vw;
+    height: 88vw;
+    border-radius: 38% 31%;
+    background-color: rgb(159 108 122 / 3%);
+    transform: rotate(19deg);
+    filter: blur(12px);
+    mix-blend-mode: overlay;
+    position: fixed;
+    top: 9vh;
+    left: -15vw;
+    z-index: -1;
+  }
+
+  #noiseLayer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: url(#noiseFilter) brightness(0.1) contrast(1.1);
+    mix-blend-mode: overlay;
+    z-index: -2;
+    pointer-events: none;
+  }
+
 </style>

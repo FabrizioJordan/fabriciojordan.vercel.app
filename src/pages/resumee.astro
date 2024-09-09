@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+import pdf from "../assets/Fabricio.pdf"
+---
+
+
+<Layout title="Fabricio Jordán PDF">
+
+    <div class="">
+        <form method="get" action={pdf}>
+            <button type="submit">Descargar CV!</button>
+         </form>
+    </div>
+
+    <iframe frameborder="0" src={pdf}></iframe>
+
+</Layout>
+
+<style>
+
+    iframe{
+        width: 60%;
+        min-height: 300px;
+        height: 100%;
+    }
+</style>
