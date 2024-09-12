@@ -9,28 +9,9 @@ import iconDumbbell from "../assets/icon/dumbbell-solid.svg";
 ---
 
 <Layout title="Fabricio Jordán Portfolio | FrontEnd Developer">
-  <script is:inline>
-    function copyMailToClipboard() {
-      window.location.href = "mailto:fabriorange28@gmail.com";
-      document.getElementById("message").classList.remove("hidden");
-      setTimeout(() => {
-        document.getElementById("message").classList.add("hidden");
-      }, 1000);
-    }
-  </script>
+
 
   <main class="flex flex-col gap-20 text-white">
-    <div
-      id="message"
-      class="z-50 hidden fixed top-6 w-full max-w-[592px] text-center"
-    >
-      <p
-        class="inline-block m-auto bg-[#505050] tracking-widest p-2 rounded-lg"
-      >
-        Enviando Mail...
-      </p>
-    </div>
-
     <AboutMe />
 
     <section
