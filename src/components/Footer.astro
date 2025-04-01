@@ -9,7 +9,7 @@ import githubIcon from "../assets/icon/github.svg";
 <footer class="w-full flex flex-col gap-4 [&_*]:transition-all [&_*]:duration-500 text-white">
     
     <div class=" flex flex-row justify-between gap-8 sm:gap-12">
-        <ul class="flex flex-row gap-8 justify-center items-center">
+        <ul class="max-[640px]:w-full flex flex-row gap-8 justify-between sm:justify-center items-center">
             <li>
                 <a href="#body">
                     <img class="min-w-8 size-8 invert hover:invert-[.55]" src={logo?.src} alt="Svg of a planet with rings.">
@@ -23,12 +23,18 @@ import githubIcon from "../assets/icon/github.svg";
                 </nav>
             </li>
         </ul>
-        <span class="text-[#9f968a] hover:text-[#ffffff]">Montevideo, Uruguay</span>
+        <span class="hidden sm:inline text-[#9f968a] hover:text-[#ffffff]">Montevideo, Uruguay</span>
     </div>
+
     <hr class="border-[#57575799]">
 
     <div class="flex flex-row justify-between items-start gap-12">
-        <a class="flex flex-col justify-center" href="mailto:fabriziodevjordan@gmail.com?subject=Hello%20Fabricio!%20..."><span class="hidden sm:inline">fabriziodevjordan@gmail.com</span><a href="mailto:fabriziodevjordan@gmail.com?subject=Hello%20Fabricio!%20..." class="sm:hidden flex text-white">Enviar Mail.</a></a>
+        <a class="hidden sm:flex flex-col justify-center" href="mailto:dev.fjordan@gmail.com?subject=Hello%20Fabricio!%20...">
+            dev.fjordan@gmail.com
+        </a>
+        <a class="sm:hidden flex flex-col justify-center" href="mailto:dev.fjordan@gmail.com?subject=Hello%20Fabricio!%20...">
+            Enviar Mail.
+        </a>
         <a class="hover:text-[#9f968a]" href="#body">Volver al Inicio</a>
     </div>
 </footer>
