@@ -2,8 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import MoreProjects from "../components/projects/MoreProjects.astro";
 import MainProjects from "../components/projects/MainProjects.astro";
-import mainProjectsJSON from "../services/docs/main-projects.json";
 import AboutMe from "../components/AboutMe.astro";
+
+import LinkProjects from "../components/projects/links/LinkProjects.astro";
+
+import mainProjectsJSON from "../services/docs/main-projects.json";
 
 import iconDumbbell from "../assets/icon/dumbbell-solid.svg";
 ---
@@ -47,9 +50,14 @@ import iconDumbbell from "../assets/icon/dumbbell-solid.svg";
       </section>
     </section>
 
-    <section>
+    <section class="flex flex-col gap-8">
       <MoreProjects />
+      <section class="flex flex-row justify-between">
+        <LinkProjects exit={true} text="Todos mis proyectos" link="https://github.com/FabrizioJordan?tab=repositories"/>
+        <LinkProjects exit={false} text="Todos mis cursos" link="."/>
+      </section>
     </section>
+
 
   </main>
 

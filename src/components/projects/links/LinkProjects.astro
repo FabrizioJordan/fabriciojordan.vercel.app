@@ -1,0 +1,19 @@
+---
+
+
+export interface Props {
+    text: string;
+    link: string;
+    exit: boolean;
+}   
+
+
+const { text, link, exit } = Astro.props;
+---
+
+<a class="underline tracking-wide duration-300 hover:text-[#dddddd]" 
+href={link} 
+target={exit ? "_blank" : "_self"}
+rel={exit ? "noopener noreferrer" : undefined}>
+    { text }
+</a>
