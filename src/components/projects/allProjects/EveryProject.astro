@@ -1,0 +1,61 @@
+---
+import githubIcon from "../../../assets/icon/github.svg";
+import goToIcon from "../../../assets/icon/arrow-up-right.svg";
+
+export interface Props{
+    title: string;
+    img: string;
+    link: string;
+    description: string;
+    github: string;
+}
+
+const { title, img, link, description, github } = Astro.props;
+
+const hasLink = !(link === "false");
+const hasGitHub = !(github === "false");
+---
+
+
+<article class="flex gap-4 flex-col justify-center items-start text-start">
+    <header class="inline-flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
+        <h3 class="text-2xl">{title}</h3>
+    </header>
+    <div>
+        <a title="see project" target="_blank" href={link}>
+            <img class="w-full h-full rounded-lg max-w-xl transition-all duration-300 hover:brightness-75" src={img} alt={description}>
+        </a>
+    </div>
+    <footer class="flex flex-col items-start gap-4
+    [&>p]:max-w-lg">
+        <p class="text-pretty text-base lg:text-lg">{description}</p>
+        <div
+            class="flex flex-row gap-2 justify-center items-center [&>A]:border-2 [&>A]:border-[#ffffff5c] hover:[&>A]:border-[#c140ff5e] [&>A]:rounded-lg [&>A]:px-3 [&>A]:py-2 [&>A]:transition-colors [&>A]:duration-500 hover:[&>A]:bg-[#2f037738]"
+        >
+            {
+                hasLink && (
+                <a
+                    title="see project page"
+                    href={link}
+                    class="noiseEffect"
+                    target="_blank"
+                >
+                    <img class="w-5 h-6" src={goToIcon?.src} alt="" />
+                </a>
+                )
+            }   
+            {
+                hasGitHub && (
+                <a
+                    title="show code"
+                    href={github}
+                    class="noiseEffect"
+                    target="_blank"
+                >
+                    <img class="w-5 h-6" src={githubIcon?.src} alt="" />
+                </a>
+                )
+            }
+        </div>
+    </footer>
+</article>

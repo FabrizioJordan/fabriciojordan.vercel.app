@@ -1,0 +1,30 @@
+---
+
+// import img
+
+import capMegaConverter from "../../../assets/img/projects/all-projects/capMega-Converter.png";
+import capRust from "../../../assets/img/projects/all-projects/capRust.png";
+import EveryProject from "./EveryProject.astro";
+
+---
+
+<section class="flex flex-col gap-8">
+
+    <article class="flex justify-between items-end">
+        <h1 class="text-4xl sm:text-5xl font-bold">Mis Proyectos</h1>
+
+        <a href="./" class="text-[#9f968a] hover:text-[#ffffff]">Volver</a>
+    </article>
+
+    
+    <section class="flex flex-col gap-12">
+
+        <!-- Tutoriales de Rust -->
+        <EveryProject title="Tutoriales de Ayuda para Rust" img={capRust?.src} link="https://github.com/FabrizioJordan?tab=repositories&q=&type=&language=rust&sort=" description="Tutoriales de Ayuda creados por mí para aprender Rust." github="false"/>
+
+        <!-- Página Mega Converter -->
+        <EveryProject title="Mega Converter" img={capMegaConverter?.src} link="https://mega-converter.vercel.app/" description="Proyecto mío para dejar varios convertidores para abarcar distintas áreas." github="https://github.com/FabrizioJordan/mega-converter"/>
+
+    </section>
+
+</section>
