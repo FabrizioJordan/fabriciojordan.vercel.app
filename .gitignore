@@ -27,4 +27,5 @@ pnpm-debug.log*
 #no hup command
 nohup.out
 
-.vscode/
+#vscode
+.vscode/*
