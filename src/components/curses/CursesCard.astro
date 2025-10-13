@@ -1,15 +1,9 @@
 ---
+import certificadoJAPImg from '@assets/img/curses/certificadoJAP.jpeg';
+import certificadoEmpleabilidadImg from '@assets/img/curses/certificadoEmpleabilidad.png';
 
-
-// import img
-
-import certificadoJAPImg from "../../../assets/img/curses/certificadoJAP.jpeg";
-import certificadoEmpleabilidadImg from "../../../assets/img/curses/certificadoEmpleabilidad.png";
-import MainCurses from "../MainCurses.astro";
-
-
+import MainCurses from "@components/curses/MainCurses.astro";
 ---
-
 <section class="flex flex-col gap-8">
 
     <article class="flex justify-between items-end">
@@ -23,7 +17,7 @@ import MainCurses from "../MainCurses.astro";
 
         <MainCurses title="Curso INEFOP - Empleabilidad" img={certificadoEmpleabilidadImg?.src} link={certificadoEmpleabilidadImg?.src} description="Curso de INEFOP de Habilidades Digitales para la Empleabilidad." />
 
-        <MainCurses title="Curso Jóvenes a Programar" img={certificadoJAPImg?.src} link="" description="Curso de Introducción a la Programación en Ciencias de la Computación de CEIBAL - Jóvenes a Programar." />
+        <MainCurses title="Curso Jóvenes a Programar" img={certificadoJAPImg?.src} link={certificadoJAPImg?.src} description="Curso de Introducción a la Programación en Ciencias de la Computación de CEIBAL - Jóvenes a Programar." />
 
     </section>
 

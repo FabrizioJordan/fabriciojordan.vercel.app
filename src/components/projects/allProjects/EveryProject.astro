@@ -1,6 +1,6 @@
 ---
-import githubIcon from "../../../assets/icon/github.svg";
-import goToIcon from "../../../assets/icon/arrow-up-right.svg";
+import githubIcon from '@assets/icon/github.svg';
+import goToIcon from '@assets/icon/arrow-up-right.svg';
 
 export interface Props{
     title: string;
@@ -15,7 +15,6 @@ const { title, img, link, description, github } = Astro.props;
 const hasLink = !(link === "false");
 const hasGitHub = !(github === "false");
 ---
-
 
 <article class="flex gap-4 flex-col justify-center items-start text-start">
     <header class="inline-flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">

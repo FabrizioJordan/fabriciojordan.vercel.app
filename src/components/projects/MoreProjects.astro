@@ -1,6 +1,6 @@
 ---
-import MiniProject from "./MiniProject.astro";
-import projects from "../../services/docs/mini-projects.json";
+import MiniProject from '@components/projects/MiniProject.astro';
+import projects from '@services/docs/mini-projects.json';
 --- 
 
 <section id="moreProjects" class="flex flex-col gap-4 max-w-3xl">
@@ -12,11 +12,11 @@ import projects from "../../services/docs/mini-projects.json";
   </hgroup>
   <ul class="flex flex-row gap-2 flex-wrap justify-center">
     { 
-      projects.map(({ name, image, url, github }) => (
+      projects.map(({ name, url, image, github }) => (
         <MiniProject
           name={name}
-          image={image}
           url={url}
+          image={image}
           github={github}
         />
       ))
