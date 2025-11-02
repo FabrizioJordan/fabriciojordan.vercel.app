@@ -2,7 +2,8 @@
 import EveryProject from '@components/projects/allProjects/EveryProject.astro';
 
 import capMegaConverter from '@assets/img/projects/all-projects/capMega-Converter.png';
-import capRust from '@assets/img/projects/all-projects/capMega-Converter.png';
+import capRust from '@assets/img/projects/all-projects/capRust.png';
+import capCPFF from '@assets/img/projects/all-projects/capCPFF.png';
 ---
 
 <section class="flex flex-col gap-8">
@@ -21,6 +22,9 @@ import capRust from '@assets/img/projects/all-projects/capMega-Converter.png';
 
         <!-- Página Mega Converter -->
         <EveryProject title="Mega Converter" img={capMegaConverter?.src} link="https://mega-converter.vercel.app/" description="Proyecto mío para dejar varios convertidores para abarcar distintas áreas." github="https://github.com/FabrizioJordan/mega-converter"/>
+
+        <!-- Página CopyFromFile -->
+        <EveryProject title="CopyFromFile" img={capCPFF?.src} link="false" description="Script open source en bash para copiar archivos desde un archivo." github="https://github.com/FabrizioJordan/copyFromFile"/>
 
     </section>
 

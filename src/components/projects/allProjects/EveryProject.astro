@@ -21,9 +21,27 @@ const hasGitHub = !(github === "false");
         <h3 class="text-2xl">{title}</h3>
     </header>
     <div>
-        <a title="see project" target="_blank" href={link}>
-            <img class="w-full h-full rounded-lg max-w-xl transition-all duration-300 hover:brightness-75" src={img} alt={description}>
-        </a>
+        {
+            hasLink && (
+            <a title="see project"
+                target="_blank"
+                href={link}
+            >
+                <img class="w-full h-full rounded-lg max-w-xl transition-all duration-300 hover:brightness-75" 
+                    src={img} 
+                    alt={description}
+                />
+            </a>
+            )
+        }
+        {
+            !hasLink && (
+            <img class="w-full h-full rounded-lg max-w-xl transition-all duration-300 hover:brightness-75" 
+                src={img} 
+                alt={description}
+            />
+            )
+        } 
     </div>
     <footer class="flex flex-col items-start gap-4
     [&>p]:max-w-lg">
